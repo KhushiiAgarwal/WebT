@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Game</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+    
+    .dropdown-container {
+      padding: 10px;
+    }
+    
+    .search-container {
+      display: none;
+      padding: 10px;
+      position: absolute;
+    }
+    
+    .scrollable-list {
+      overflow-y: auto;
+      padding: 5px;
+    }
+  </style>
+  <script>
+    var items = [];
+    
+    function addItem() {
+      var itemInput = document.getElementById("itemInput");
+      var listContainer = document.getElementById("listContainer");
+      var listItem = document.createElement("div");
+      listItem.textContent = itemInput.value;
+      listContainer.appendChild(listItem);
+      items.push(itemInput.value);
+      itemInput.value = "";
+    }
+
+    function displaySortedItems() {
+      var sortedItems = items.slice().sort();
+      var sortedList = document.getElementById("sortedList");
+      sortedList.innerHTML = sortedItems.join("<br />");
+    }
+
+    function clearItems() {
+      var listContainer = document.getElementById("listContainer");
+      listContainer.innerHTML = "";
+      items = [];
+      var sortedList = document.getElementById("sortedList");
+      sortedList.innerHTML = "";
+    }
+
+    function showSearch() {
+      var searchContainer = document.getElementById("searchContainer");
+      searchContainer.style.display = "block";
+    }
+
+    function searchItem() {
+      var searchInput = document.getElementById("searchInput");
+      var index = items.indexOf(searchInput.value);
+      var searchResult = document.getElementById("searchResult");
+      searchResult.innerHTML = index !== -1 ? "Index: " + index : "Index: Not found";
+    }
+  </script>
+</head>
+<body bgcolor="ECFDFD">
+  <div class="dropdown-container">
+    <label for="itemInput">Enter Item:</label>
+    <input type="text" id="itemInput">
+    <button onclick="addItem()">Add</button>
+  </div>
+  <div class="dropdown-container">
+    <div id="listContainer" class="scrollable-list"></div>
+  </div>
+  <div class="dropdown-container">
+    <button onclick="displaySortedItems()">Sort List</button>
+    <button onclick="clearItems()">Clear</button>
+    <button onclick="showSearch()">Search</button>
+  </div>
+  <div id="searchContainer" class="search-container">
+    <label for="searchInput">Search Item:</label>
+    <input type="text" id="searchInput">
+    <button onclick="searchItem()">Search</button>
+    <div id="searchResult"></div>
+  </div>
+  <div class="dropdown-container">
+    <label for="sortedList">Sorted List:</label>
+    <div id="sortedList"></div>
+  </div>
+</body>
+</html>
