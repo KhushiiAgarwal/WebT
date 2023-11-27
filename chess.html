@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        #chessboard {
+            border-collapse: collapse;
+            border: 2px solid #333;
+            margin-top: 20px;
+        }
+
+        #chessboard td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+        }
+
+        #chessboard .black {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .input-container {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input-container">
+        <label for="dimension">Enter Chessboard Dimension: </label>
+        <input type="number" id="dimension" value="8" min="1" max="20" />
+    </div>
+
+    <button onclick="resizeChessboard()">Resize</button>
+
+    <table id="chessboard"></table>
+
+    <script>
+        function createChessboard(dimension) {
+            const chessboard = document.getElementById('chessboard');
+            chessboard.innerHTML = '';
+
+            for (let i = 0; i < dimension; i++) {
+                const row = chessboard.insertRow(i);
+                for (let j = 0; j < dimension; j++) {
+                    const cell = row.insertCell(j);
+                    const isBlack = (i + j) % 2 !== 0;
+                    cell.className = isBlack ? 'black' : '';
+                    cell.textContent = isBlack ? 'B' : 'W';
+                }
+            }
+        }
+
+        function resizeChessboard() {
+            const dimensionInput = document.getElementById('dimension');
+            const dimension = parseInt(dimensionInput.value, 10);
+
+            if (!isNaN(dimension) && dimension >= 1 && dimension <= 20) {
+                createChessboard(dimension);
+            } else {
+                alert('Please enter a valid dimension between 1 and 20.');
+            }
+        }
+
+        // Initial creation of chessboard with default dimension
+        createChessboard(8);
+    </script>
+</body>
+
+</html>

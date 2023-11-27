@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .list {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 150px;
+        }
+
+        #list1, #list2 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        #list1 li, #list2 li {
+            margin-bottom: 5px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        #list1 li:hover {
+            background-color: #ddd;
+        }
+
+        #clearBtn {
+            padding: 10px;
+            background-color: #e44d26;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #clearBtn:hover {
+            background-color: #d14024;
+        }
+
+        #nextPage {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #nextPage h2 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="list" id="list1">
+        <h3>List 1</h3>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </div>
+
+    <div class="list" id="list2">
+        <h3>List 2</h3>
+        <ul></ul>
+    </div>
+</div>
+
+<button id="clearBtn">Clear</button>
+
+<div id="nextPage">
+    <h2>This is the Next Page</h2>
+    <!-- Add content for the next page here -->
+</div>
+
+<script>
+    // Copy contents from list1 to list2 on click
+    $('#list1 li').on('click', function() {
+        $('#list2 ul').append($(this).clone());
+    });
+
+    // Clear the contents of list2 on clear button click
+    $('#clearBtn').on('click', function() {
+        $('#list2 ul').empty();
+    });
+</script>
+
+</body>
+</html>
