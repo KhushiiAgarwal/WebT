@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Responsive Tabs with Bootstrap and JQuery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Link Bootstrap CSS and JQuery libraries -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f2f2f2;
+        }
+  
+        .container {
+          margin-top: 50px;
+        }
+  
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-weight: bold;
+        }
+  
+        .nav-pills .nav-link.active,
+        .nav-pills .show > .nav-link {
+          background-color: #007bff;
+          color: #fff;
+        }
+  
+        .tab-content {
+          border: 1px solid #ddd;
+          padding: 20px;
+          margin-top: 20px;
+        }
+  
+        .tab-pane {
+          display: none;
+        }
+  
+        .tab-pane.active {
+          display: block;
+        }
+      </style>
+  </head>
+  
+  <body>
+    <div class="container">
+      <h2>Vishwakarma Institute of Technology, Pune <br>
+      Department of Computer Engineering: Module 5
+      </h2>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#smd">SMD</a></li>
+        <li><a data-toggle="tab" href="#cn">CN</a></li>
+        <li><a data-toggle="tab" href="#wt">WT</a></li>
+        <li><a data-toggle="tab" href="#daa">DAA</a></li>
+        <li><a data-toggle="tab" href="#edi">EDI</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="smd" class="tab-pane fade in active">
+          <h3>Software Modelling and Design</h3>
+          <p>
+            Course Relevance: <br> 
+            Given that Software Engineering is built upon the foundations of Computer Science as well as Computer Engineering, a Software Engineering curriculum can be focused on two perspectives - a Computer Science-first or Software Engineering-first perspective. Software engineering spans the entire software lifecycle. It involves creating high-quality and reliable programs in a systematic,
+            controlled, and efficient manner using formal methods for specification, analysis, design and evaluation of proposed systems. It requires suitable software development techniques and processes that successfully scale to large applications, which should satisfy timing, size, and security
+            requirements all within acceptable application/project budgets and deadlines. For these reasons, Software Engineering requires both the analytical and descriptive tools and techniques developed in
+            Computer Science and the rigor that the Computer Engineering discipline brings to the reliability and trustworthiness of the systems that software developers design and implement, while working as a cohesive team.
+          </p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Section</th>
+                <th>Marks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ESE</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>CVV</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>CP</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                  <td>Seminar/GD</td>
+                  <td>20</td>
+              </tr>
+              <tr>
+                  <td>Home Assignment</td>
+                  <td>-</td>
+              </tr>
+              <tr>
+                  <td>Lab Assesment</td>
+                  <td>10</td>
+              </tr>
+              <tr>
+                  <td>Lab Exam</td>
+                  <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="cn" class="tab-pane fade">
+          <h3>Computer Networks</h3>
+          <p>
+            Course Relevance: <br>
+            The key technology of the information age is communications. Data communications and networking is a truly global area of study, both because the technology enables global communication over
+    telephone lines and Internet. Data communication and networking is the backbone of all IT infrastructures in the world. These technologies and applications often emerge in communication
+    within countries of countries and spread rapidly around the world.
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ESE</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>CVV</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>CP</td>
+              <td>20</td>
+            </tr>
+            <tr>
+                <td>Seminar/GD</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Home Assignment</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Lab Assesment</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Lab Exam</td>
+                <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <div id="wt" class="tab-pane fade">
+          <h3>Web Technology</h3>
+          <p>
+            Course Relevance: <br> 
+            The key technology of the information age is global communication. Web technology is a truly global area of study as it enables global communication with the help of web sites. Web technologies
+    are the backbone of all IT infrastructures and their applications in the world. These technologies and applications often emerge in communication within countries of countries and spread rapidly around
+    the world. The main objective of the course is present the basic web technology concepts that are required for developing web applications. The key technology components are descriptive languages,
+    server-side program elements and client-side program elements. In addition, the course gives specific contents that are beneficial for developing web-based solutions, like relational data-base
+    communication basics and information security principles and approaches. Most of the jobs available in the IT industries are web technology related.
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ESE</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>CVV</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>CP</td>
+              <td>20</td>
+            </tr>
+            <tr>
+                <td>Seminar/GD</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Home Assignment</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Lab Assesment</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Lab Exam</td>
+                <td>50</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        
+        <div id="daa" class="tab-pane fade">
+          <h3>Design and Analysis of Algorithms</h3>
+          <p>
+            Course Relevance: <br>
+            This is a foundational course for Computer science and Engineering. This course develops algorithmic thinking capability of students. Designing algorithms using a suitable paradigm and
+    analysing the algorithms for computational problems has high relevance in all domains where computer science plays a crucial role (equally in Industry as well as research). This course is also an
+    essential pre-requisite for advanced domain-specific algorithmic courses such as Algorithmic Graph Theory, Algorithmic Number Theory, Computational Geometry, Motion planning and Robotics, etc,
+    to give a few examples. Once the student gains expertise in Algorithm design and in general gains the ability to Algorithmic thinking, it facilitates in the systematic study of any other domain (in computer
+    science or otherwise) which demands logical thinking. This course is also relevant for students who want to pursue a research career in the theory of computing, computational complexity theory, advanced
+    algorithmic research.
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ESE</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>CVV</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>CP</td>
+              <td>20</td>
+            </tr>
+            <tr>
+                <td>Seminar/GD</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Home Assignment</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Lab Assesment</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Lab Exam</td>
+                <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div id="edi" class="tab-pane fade">
+          <h2>Engineering Design and Innovation</h2>
+          <p> 
+              Course Relevance: <br> 
+              Project Centric Learning (PCL) is a powerful tool for students to work in areas of their choice and strengths. Along with course-based projects, the curriculum can be enriched with
+      semester-long Engineering Design and Development courses, in which students can solve socially relevant problems using various technologies from relevant disciplines. The various socially relevant
+      domains can be like Health care, Agriculture, Defense, Education, Smart City, Smart Energy, and Swaccha Bharat Abhiyan. To gain the necessary skills to tackle such projects, students can select
+      relevant online courses and acquire skills from numerous sources under the guidance of faculty and enrich their knowledge in the project domain, thereby achieving project-centric learning. The modern
+      world sustained and advanced through the successful completion of projects. In short, if students are prepared for success in life, we need to prepare them for a project-based world. It is a style of active
+      learning and inquiry-based learning. Project-centric learning will also redefine the role of the teacher as a mentor in the learning process. The PCL model focuses the student on a big open-ended question,
+      challenge, or problem to research and respond to and/or solve. It brings students not only to know, understand and remember rather it takes them to analyze, design and apply categories of Bloom’s
+      Taxonomy.
+          </p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Section</th>
+                <th>Marks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MSE</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>ESE</td>
+                <td>70</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        $(".nav-tabs a").click(function(){
+          $(this).tab('show');
+        });
+      });
+    </script>
+  </body>
+</html>
