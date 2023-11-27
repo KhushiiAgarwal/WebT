@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Operations Assignment</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="Assignment3_styles.css" />
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        margin-top: 50px;
+      }
+
+      .card {
+        margin-bottom: 20px;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .form-control {
+        margin-bottom: 10px;
+      }
+
+      .btn-primary {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mb-4">Array Operations</h1>
+
+      <div class="row">
+        <!-- Integer Array Section -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Integer Array</h2>
+              <input
+                type="text"
+                class="form-control"
+                id="integer-input"
+                placeholder="Enter integers (comma-separated)"
+              />
+              <button
+                class="btn btn-primary"
+                onclick="parseAndDisplayArray()"
+              >
+                Display Array
+              </button>
+              <button class="btn btn-primary" onclick="sortArray()">
+                Sort Array
+              </button>
+              <div id="integer-array-output"></div>
+              <input
+                type="text"
+                class="form-control"
+                id="search-integer"
+                placeholder="Enter Number to be searched"
+              />
+              <button class="btn btn-primary" onclick="searchInteger()">
+                Search Element
+              </button>
+              <div id="search-array-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Array of Named Entities Section -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Named Entities Array</h2>
+              <input
+                type="text"
+                class="form-control"
+                id="entity-input"
+                placeholder="Enter named entities (comma-separated)"
+              />
+              <button
+                class="btn btn-primary"
+                onclick="parseAndDisplayEntities()"
+              >
+                Display Entities
+              </button>
+              <div id="entity-array-output"></div>
+              <input
+                type="text"
+                class="form-control"
+                id="search-entity"
+                placeholder="Enter Entity to be searched"
+              />
+              <button class="btn btn-primary" onclick="searchEntity()">
+                Search Entity
+              </button>
+              <div id="search-entity-output"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="Assignment3_scripts.js"></script>
+  </body>
+</html>
