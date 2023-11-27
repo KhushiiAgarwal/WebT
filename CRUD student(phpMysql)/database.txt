@@ -1,0 +1,3 @@
+create database student;
+use student;
+ CREATE TABLE results (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,name VARCHAR(100) NOT NULL,class VARCHAR(20) NOT NULL,marks INT NOT NULL);
