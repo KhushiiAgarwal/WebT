@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Electricity Bill Calculator</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		 <h1 class="my-4">Electricity Bill Calculator</h1>
+		 <form id="electricity-bill-form">
+			 <div class="form-group">
+				 <label for="units">Enter Units Consumed:</label>
+				 <input type="number" class="form-control" id="units" name="units" placeholder="Enter units">
+			 </div>
+		 <button type="submit" class="btn btn-primary">Calculate Bill</button>
+		 </form>
+		 <div id="bill-amount"></div>
+	 </div>
+	
+	 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	 <script>
+		 $(document).ready(function() {
+			 $('#electricity-bill-form').submit(function(event) {
+				 event.preventDefault();
+				 $.ajax({
+					 type: 'POST',
+					 url: '/calculate-bill',
+					 data: $(this).serialize(),
+					 success: function(response) {
+					 	$('#bill-amount').html('Your bill amount is Rs.' + response);
+					 }
+				 });
+			 });
+		 });
+	 </script>
+</body>
+</html>
