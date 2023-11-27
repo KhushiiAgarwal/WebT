@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add and Delete Records Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        label, input, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+	   <h2>Add and Delete Records Table</h2>
+    <table id="recordsTable" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>jane@example.com</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Add New Record</h2>
+    <form id="addRecordForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="button" onclick="addRecord()">Add Record</button>
+    </form>
+
+    <script>
+        function deleteRow(button) {
+            // Get the reference to the button's parent row (tr element)
+            var row = button.parentNode.parentNode;
+            
+            // Get the reference to the table
+            var table = document.getElementById('recordsTable');
+            
+            // Delete the row from the table
+            table.deleteRow(row.rowIndex);
+        }
+
+        function addRecord() {
+            // Get the values from the form
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            
+            // Get the reference to the table body
+            var tableBody = document.getElementById('recordsTable').getElementsByTagName('tbody')[0];
+            
+            // Create a new row and cells
+            var newRow = tableBody.insertRow();
+            var nameCell = newRow.insertCell();
+            var emailCell = newRow.insertCell();
+            var actionCell = newRow.insertCell();
+
+            // Set the values in the cells
+            nameCell.innerHTML = name;
+            emailCell.innerHTML = email;
+            actionCell.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
+
+            // Reset the form
+            document.getElementById('addRecordForm').reset();
+        }
+    </script>
+    
+</body>
+</html>
