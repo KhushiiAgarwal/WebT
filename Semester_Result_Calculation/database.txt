@@ -1,0 +1,19 @@
+CREATE TABLE results (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    roll_number VARCHAR(20),
+    year INT,
+    semester INT,
+    marks INT,
+    subject VARCHAR(20)
+);
+-- Inserting dummy data for testing
+INSERT INTO results (roll_number, year, semester, marks) VALUES
+('A101', 2022, 1, 85,CN),
+('A101', 2022, 2, 78,IOT),
+('A101', 2022, 3, 92,DAA),
+('B202', 2022, 1, 75,CN),
+('B202', 2022, 2, 88,DSA),
+('B202', 2022, 3, 95,DAA),
+('C303', 2022, 1, 92,IOT),
+('C303', 2022, 2, 80,TOC),
+('C303', 2022, 3, 87,OS);
