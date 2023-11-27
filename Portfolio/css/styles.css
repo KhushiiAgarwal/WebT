@@ -1,0 +1,167 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.sidebar-wrapper {
+    width: 30%;
+    background-color: #3498db;
+    color: #ecf0f1;
+    padding: 20px;
+}
+
+.profile-container {
+    text-align: center;
+}
+
+.profile-img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.tagline {
+    font-size: 20px;
+    margin: 0;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+}
+
+.contact-list i {
+    margin-right: 10px;
+}
+
+.education-container {
+    background-color: #3498db;
+    padding: 20px;
+    color: #ecf0f1;
+}
+
+.education-container .container-block-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.education-container .item {
+    margin: 20px 0;
+}
+
+.languages-container {
+    background-color: #27ae60;
+    padding: 20px;
+    color: #ecf0f1;
+}
+
+.languages-container .container-block-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.languages-container .interests-list {
+    padding: 0;
+    list-style: none;
+}
+
+.languages-container .interests-list li {
+    margin-bottom: 10px;
+}
+
+/* Main content area styles */
+.main-wrapper {
+    width: 70%;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #3498db;
+}
+
+.summary {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Skills section styles */
+.skillset .item {
+    margin: 15px 0;
+}
+
+.level-title {
+    font-size: 18px;
+}
+
+.level-bar {
+    background-color: #ecf0f1;
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.level-bar-inner {
+    background-color: #3498db;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Projects section styles */
+.projects-section .intro {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.projects-section .item {
+    margin: 15px 0;
+}
+
+.project-title {
+    font-size: 20px;
+    color: #3498db;
+}
+
+.project-tagline {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #ecf0f1;
+    padding: 10px;
+    text-align: center;
+}
+
+.copyright a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
