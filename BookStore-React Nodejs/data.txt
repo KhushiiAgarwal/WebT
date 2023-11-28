@@ -1,0 +1,5 @@
+npx create-react-app bookstore-client
+npm install express
+npm install react-router-dom@5
+node server.js
+npm start
