@@ -1,0 +1,9 @@
+{
+    "users": [],
+    "books": [
+      {"id": 1, "title": "Book 1", "author": "Author 1", "price": 19.99},
+      {"id": 2, "title": "Book 2", "author": "Author 2", "price": 29.99},
+      {"id": 3, "title": "Book 3", "author": "Author 3", "price": 14.99}
+    ]
+  }
+  
