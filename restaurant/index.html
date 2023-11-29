@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Food Order Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Restaurant Food Order Menu</h1>
+    <form action="order_summary.php" method="post">
+        <label for="burger">Burger</label>
+        <input type="number" id="burger" name="burger" min="0">
+
+        <label for="pizza">Pizza</label>
+        <input type="number" id="pizza" name="pizza" min="0">
+
+        <label for="pasta">Pasta</label>
+        <input type="number" id="pasta" name="pasta" min="0">
+
+        <button type="submit">Place Order</button>
+    </form>
+
+</body>
+</html>
