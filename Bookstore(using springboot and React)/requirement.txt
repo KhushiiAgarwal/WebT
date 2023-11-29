@@ -1,0 +1,22 @@
+CREATE DATABASE bookstore;
+USE bookstore;
+CREATE TABLE book (
+    id INT NOT NULL AUTO_INCREMENT,
+    author VARCHAR(255),
+    name VARCHAR(255),
+    price VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+
+//for react
+npx create-react-app bookstore-client
+  cd bookstore-client
+  npm start
+  
+make changes in App.js , App.css 
+make new file catalog.js
+in package.json add the following line
+    "proxy": "http://localhost:8080" 
+  
+  
