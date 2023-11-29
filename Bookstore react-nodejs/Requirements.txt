@@ -1,0 +1,4 @@
+Run following commands to setup and start
+
+npm install
+npm start
