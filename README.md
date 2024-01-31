@@ -1,6 +1,7 @@
 # Web Technology Mini Projects
+
 ## Tech Stack
-[![](https://skillicons.dev/icons?i=js,html,css,react,nodejs,php)](https://skillicons.dev)
+[![](https://skillicons.dev/icons?i=js,html,css,react,nodejs,php,spring)](https://skillicons.dev)
 ### Pre-requistes & Installation
 * XAMPP installed for PHP
 * Spring suite/ VS Code Spring installed
@@ -29,4 +30,9 @@ npm start
 ```
 * For HTML projects directly click on file after saving with **.html** extension
 * For PHP projects ensure to save code in htdocs folder in PHP folder under XAMPP. Run script on localhost.
-###### If you find my repository helpful, please star⭐ it 🌟.
+* To run springboot projects: https://spring.io/guides/gs/spring-boot/
+
+#### License
+This project is licensed under [MIT License](docs/license.md)
+##### If you find my repository helpful, please star⭐ it 🌟.
+
