@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Array</title>
+</head>
+
+<body>
+    <form>
+        <label for="numberInput">Enter a number:</label>
+        <input type="number" id="numberInput" />
+        <button type="button" onclick="addNumber()">Add to Array</button>
+    </form>
+    <br><br>
+    <select multiple="multiple" style="width: 100px; height:100px" id="numberarray"></select>
+    <br><br><br>
+    <button type="button" onclick="reversenumber()">Reverse Array</button>
+    <h2>Reversed array</h2>
+    <select multiple="multiple" style="width: 100px; height:100px" id="ReverseNumberarray"></select>
+    <br><br><br>
+
+    <script>
+        var numbers = [];
+        var Reversenumber = [];
+
+        function addNumber() {
+            var numberInput = document.getElementById("numberInput");
+            var number = numberInput.value;
+
+            if (number !== "") {
+                numbers.push(parseFloat(number));
+
+                var option = document.createElement("option");
+                option.text = number;
+
+                var numberarray = document.getElementById("numberarray");
+                numberarray.add(option);
+
+                numberInput.value = "";
+            }
+        }
+
+        function reversenumber() {
+            // Create a copy of the array before reversing
+            Reversenumber = numbers.slice().reverse();
+
+            var rnumbers = document.getElementById("ReverseNumberarray");
+            rnumbers.innerHTML = "";
+
+            for (var i = 0; i < Reversenumber.length; i++) {
+                var option = document.createElement("option");
+                option.text = Reversenumber[i];
+                rnumbers.add(option);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
