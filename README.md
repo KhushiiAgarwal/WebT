@@ -1,7 +1,7 @@
 # Web Technology Mini Projects
 
 ## Tech Stack
-[![](https://skillicons.dev/icons?i=js,html,css,react,nodejs,php,spring)](https://skillicons.dev)
+[![](https://skillicons.dev/icons?i=js,html,css,react,nodejs,php,spring,mysql)](https://skillicons.dev)
 
 ### Problem Statements
 1. CV website with video background using Bootstrap and jQuery.
