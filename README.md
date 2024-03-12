@@ -34,9 +34,9 @@
 28. CRUD for employee records using PHP
     
 ### Pre-requistes & Installation
-* XAMPP installed for PHP
-* Spring suite/ VS Code Spring installed
-* React, node.js installed
+* XAMPP installed for PHP : https://www.apachefriends.org/download.html
+* Spring suite/ VS Code Spring installed: https://spring.io/projects/spring-boot
+* React, node.js installed : https://react.dev/learn/installation and https://nodejs.org/en/download
 ### Runnning program
 * * Clone the repository:
 ```
